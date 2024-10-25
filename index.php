@@ -42,7 +42,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 margin:0; /*eliminamos margenes*/
                 width: 100%;
                 height: 100%;
-                
+
             }
             #rdo{
                 text-align: right; /*alineado a la derecha*/
@@ -135,9 +135,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     $igualDes = false;
                     $opDes = true;
                 }
-
-                if (strlen($rdo) == 9 && $op2 != '') {
-                    $numDes = true; //bloqueamos que no se incluyan más numeros en el segundo operador
+            } else {
+                $rdo = $rdo;
+                if ($op2 != '') {
+                    $igualDes = false; //desbloqueamos el = en caso de llegar a 10 numeros en el segundo operador
+                    $opDes = true; //bloqueamos los operadores
                 }
             }
         }
@@ -195,6 +197,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 </table>
             </form>
         </main>
+                    <?php
+                    /**
+                     * Copyright (c) 2024 Pablo Expósito Martínez.
+                     * Todos los derechos reservados.
+                     *
+                     * Este código está protegido por derechos de autor y no puede
+                     * ser reproducido, distribuido ni usado sin el permiso del titular.
+                     */
+                    ?>
 
     </body>
 </html>
